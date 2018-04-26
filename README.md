@@ -17,3 +17,13 @@ html、css、js。。。。。learn
                             2、使用 Node 创建 Web 客户端  输入命令：node client.js
 
 20180425  React React 组件  在React-Components.html 文件中。
+
+
+20180426  Node.js  Express 框架  执行以下命令安装模块：$ cnpm install express --save，
+                                                       $ cnpm install body-parser --save
+                                                       $ cnpm install cookie-parser --save
+                                                       $ cnpm install multer --save
+                                 查看express使用的版本号：cnpm list express
+                                 运行实例代码：node express_demo.js 
+
+20180426  React State(状态)  在React-State.html 文件中。
