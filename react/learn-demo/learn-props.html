@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <title>Node Js教程(runoob.com)</title>
-    <script src="https://cdn.bootcss.com/react/16.4.0-alpha.0911da3/cjs/react.development.js"></script>
-    <script src="https://cdn.bootcss.com/react-dom/16.4.0-alpha.0911da3/cjs/react-dom-server.browser.development.js"></script>
-    <script src="https://cdn.bootcss.com/babel-core/6.1.19/browser.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
 
 </head>
 <body>
@@ -50,7 +50,7 @@
             console.log(props);
             return <h2>Welcome {props.name}</h2>
         }
-        React.render(<App />,document.getElementById('container02'));
+        ReactDOM.render(<App />,document.getElementById('container02'));
     </script>
     //refs属性
     <script type="text/babel">

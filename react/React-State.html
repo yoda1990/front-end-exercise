@@ -10,17 +10,9 @@
   <body>
     <div id="example"></div>
     <script type="text/babel">
-      ({liked: !this.state.liked});
-         },
-         render: function() {
-            var text = this.state.liked ? '喜欢' : '不喜欢';
-            return (
-              <p onClick={this.handleClick}>
-               你<b>{text}</b>我。点我切换状态。
-              </p>
-            );
-          }
-        });
+      class LikeButton extends React.Component{
+
+      }
       ReactDOM.render(
          <LikeButton />,
          document.getElementById('example')
