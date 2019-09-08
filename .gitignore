@@ -8,3 +8,4 @@
 *.gz
 /react/code/code/react_demo/prepare/*
 /vue/node_modules/*
+/node-js/*
