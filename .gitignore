@@ -2,7 +2,7 @@
 /.settings/
 /.classpath
 .project
-/.idea/
+.idea/
 /bin/
 /*.iml
 *.gz
