@@ -1,0 +1,134 @@
+<!DOCTYPE HTML> <!-- <!DOCTYPE HTML> 不属于html标签，它用于定义文档类型。-->
+<html>
+    <head>
+        <title>标题</title>
+
+        <meta http-equiv="Content-Tpye"  content="text/html;charset=utf-8"/>
+        <!--http-equiv="Content-Tpye"告诉我们文档类型
+             content="text/html;charset=utf-8"告诉我们内容是一个html文件，他的编码形式是utf-8-->
+        <!-- <meta />是单标签，目前已知的单标签还有<hr/>(水平线标签）、<br/>（换行标签）-->
+        <h1>什么是HTML</h1>
+        <h2>什么是HTML</h2>
+        <h3>什么是HTML</h3>
+        <h4>什么是HTML</h4>
+        <h5>什么是HTML</h5>
+        <h6>什么是HTML</h6>
+        <!-- 标题标签：<h1></h1>~<h6></h6> -->
+        
+
+    </head>
+    <body bgcolor="red"><!--bgcolor="red" 为HTML的标签属性-->
+        网页内容
+        <p>&nbsp;hello</p>
+        <!-- 段落标签：<p></p>-->
+        <!--align 对齐属性值，left：左对齐内容，right：右对齐内容，center：居中对齐内容，justify：对行进行伸展，这样每行都可以有相等的长度 -->
+        <br/> <!-- 换行标签 -->
+        <hr/><!-- hr是水平线 -->
+        <pre> 预格式化标签 </pre> 
+        &nbsp;（空格代码）
+        <i>html</i>和<em>html</em>效果一样，都是斜体
+        <b>html</b>和<strong>html</strong>效果一样，都是加粗
+
+        <!--无序列表-->
+        <ul>
+            <li>列表项</li>
+            <li>列表项</li>
+        </ul>
+
+        <ul type="disc" >
+            <li>列表项</li>
+            <li>列表项</li>
+        </ul>
+
+        <ul type="square" >
+            <li>列表项</li>
+            <li>列表项</li>
+        </ul>
+
+        <ul type="circle">
+            <li>列表项</li>
+            <li>列表项</li>
+        </ul>
+
+        <!--有序列表-->
+        <ol>
+            <li>列表项</li>
+            <li>列表项</li>
+        </ol>
+
+        <ol type="1">
+            <li>列表项</li>
+            <li>列表项</li>
+        </ol>
+
+        <ol type="a">
+            <li>列表项</li>
+            <li>列表项</li>
+        </ol>
+
+        <ol type="A">
+            <li>列表项</li>
+            <li>列表项</li>
+        </ol>
+
+        <ol type="i">
+            <li>列表项</li>
+            <li>列表项</li>
+        </ol>
+
+        <ol type="I">
+            <li>列表项</li>
+            <li>列表项</li>
+        </ol>
+
+        <!--列表标签-->
+        <dl>
+            <dt>定义列表项</dt>
+            <dd>列表项描述</dd>
+            <dd>列表项描述</dd>
+            <dt>定义列表项</dt>
+            <dd>列表项描述</dd>
+        </dl>
+        <!--定义列表标签用<dl></dl>表示，一个<dl></dl>标签内可以有多个<dt></dt>
+           • <dt></dt>就是列表项
+           • <dd></dd>列表项描述，可以理解为dd是对dt的描述
+           • dt可以理解为标题，dd可以理解为相应的描述内容-->
+
+        <!-- 一、无序列表ul的应用场景：导航、各种列表 -->
+        <!-- 二、dl使用场景：带摘要的新闻列表、带缩略图和其他描述的列表 -->
+
+        <!-- 一、图像<img src="" />基础  -->
+        <img src="" alt="" width="500px" height="500px"/>
+        <!-- 二、align属性 但是align="center"，图片不会显示在div的正中间。
+            根据w3school，align的属性有top、bottom、middle、left、right。这块还得再好好看看w3school。以后再研究研究。-->
+
+        <!-- 一、超链接基础 --> 
+        <a href="连接地址"> </a>
+        <!-- 超链接（空链接、href="#"）-->
+        <!-- href="" 刷新页面 -->
+
+        <!--target属性
+           默认情况下，超链接是在当前页面打开一个新的页面。(主要看前两个)
+           _self，默认值，在当前页面打开一个新的页面
+           _blank，在新标签页打开新的页面
+           _top（课程没讲）
+           _parent（课程没讲）-->
+
+        <!-- title属性  当浏览者的光标，停留在超链接上时，鼠标光标会显示title属性的值。 -->
+
+        <!-- 锚链接 -->
+        <a href="#锚点1">目录一</a>
+        <a href="#锚点2">目录二</a>
+        <a href="..." name="锚点1">内容</a>
+        <a href="..." name="锚点2">内容</a>
+
+        <!-- 锚链接（不同页面）-->
+        <!-- 网页1 -->
+        <a href="网页名称#锚点1">目录一</a>
+
+        <!-- 网页2 -->
+        <a href="..." name="锚点1">内容</a>
+        
+
+    </body>
+</html>
