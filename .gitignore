@@ -7,5 +7,12 @@
 /*.iml
 *.gz
 /react/code/code/react_demo/prepare/*
-/vue/node_modules/*
+/vue_project/movie_view/node_modules/
+/vue_project/movie_view/dist/
+/vue_project/movie_view/npm-debug.log*
+/vue_project/movie_view/yarn-debug.log*
+/vue_project/movie_view/yarn-error.log*
+/vue_project/movie_view/test/unit/coverage/
+/vue_project/movie_view/test/e2e/reports/
+/vue_project/movie_view/.*
 /node-js/*

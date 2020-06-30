@@ -5,6 +5,11 @@
     </head>
     <body>
         <table border="1px">
+            <caption>表格标题</caption>
+            <tr>
+                <th>表格头一</th>
+                <th>表格头二</th>
+            </tr>
             <tr>
                 <td>第一行</td>
                 <td>第一行</td>
@@ -14,5 +19,39 @@
                 <td>第二行</td>
             </tr>
         </table>
+
+        <!--带结构的表格：表格划分三部分：表头、主题、脚注
+                    • thead：表格的头（放表头th之类的内容）
+                    • tbody：表格的主体（放数据主体）
+                    • tfoot：表格的脚（放表格的脚注）-->
+
+        <table width="500px" bgcolor="yellow" border="1px" cellpadding = "10px" cellspacing="0">
+            <caption>表格的标题</caption>
+            <thead>
+                <tr>
+                    <th>表头表头</th>
+                    <th>表头表头</th>
+                    <th>表头表头</th>
+                    <th>表头表头</th>
+                </tr>
+            </thead>
+            <tbody align="right" valign="top">
+                <tr align="center" valign = "bottom">
+                    <td height="30px">正文</td>
+                    <td>正文</td>
+                    <td>正文</td>
+                    <td>正文</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr bgcolor="#d8e4bc">
+                    <td height="100px" width="100px" bgcolor="red" align="right" valign="top">脚注</td>
+                    <td>脚注</td>
+                    <td>脚注</td>
+                    <td>脚注</td>
+                </tr>
+            </tfoot>
+        </table>
+
     </body>
 </html>
