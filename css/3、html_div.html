@@ -2,11 +2,57 @@
 <html>
     <head>
         <title>盒子模型</title>
+        <style>
+            p {
+                background-color: #ececec;
+                width: 400px;
+                height: 400px;
+                padding: 20px;
+                margin: auto;
+            }
 
+            .one {max-width: 500px;}
+            .two {
+                min-width: 250px;
+            }
+            .height {
+                background-color: aqua;height: 50%;;
+            }
+            .three {max-height: 500px;}
+            .four {
+                min-height: 250px;
+            }
+            div,span {
+                background-color: #00aaee;
+                border: 1px #666 solid;
+            }
+            div {
+                display: inline;
+            }
+            span {
+                display: block;
+            }
+        </style>
     </head>
     <body>
-        <div>
-            
-        </div>
+        <h1>宽度属性</h1>
+        <p>盒子模型宽度width：400px;</p>
+        <p class="one">盒子模型最大宽度 max-width:500px</p>
+        <p class="two">盒子模型最大宽度 min-width:250px</p>
+
+        <h1>高度属性</h1>
+        <p class="height">盒子模型高度 height：400px;</p>
+        <p class="three">盒子模型最大高度 max-height:500px</p>
+        <p class="four">盒子模型最大高度 min-height:250px</p>
+
+        <h1>块级元素</h1>
+        <div>display属性-div</div>
+        <div>display属性-div</div>
+        <div>display属性-div</div>
+
+        <h1>内联元素</h1>
+        <span>display属性-span</span>
+        <span>display属性-span</span>
+        <span>display属性-span</span>
     </body>
 </html>
