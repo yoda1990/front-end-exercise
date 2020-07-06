@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS背景和列表</title>
+        <style>
+            div{
+                width: 300px;
+                height: 300px;
+                background-color: rgb(255,0,0);
+                border: 20px solid;
+                background-image: url("图片url");
+                background-repeat: repeat;
+
+            }
+
+            ul li {
+                list-style-type: decimal;
+                list-style-image: url("图片url");
+                list-style-position: outside;
+            }
+            ul li {
+                list-style: square inside url("图片url");
+            }
+        </style>
+    </head>
+    <body>
+        <div>background-color</div>
+
+        <ul>
+            <li>家用电器</li>
+            <li>电脑</li>
+            <li>手机</li>
+        </ul>
+    </body>
+</html>
