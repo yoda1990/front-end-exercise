@@ -90,9 +90,69 @@
                 float: left;
                 font-size: 14px;
                 background-color: #24282c;
-                color: #8f9393;
+                color: #fff;
                 text-align: center;
             }
+
+            .header-top-right{
+                line-height: 40px;
+            }
+
+            .header-top-right-list li{
+                width: 70px;
+                height: 40px;
+                float: left;
+                font-size: 14px;
+                color: #5c6169;
+                text-align: center;
+            }
+            .header-top-right-list a{
+                font-size: 14px;
+                color: #5c6169;
+                text-align: center;
+            }
+            .header-top-right-list .lagou-app{
+                color: #05b48d;
+                margin-right: 20px;
+            }
+            .header-top-right-list .login-register{
+                width: 120px;
+            }
+            .header-top-right-list span{
+                color: #5c6169;
+                text-align: center;
+                width: 20px;
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+            .header-top-right-list .upload{
+                margin-right: 15px;
+            }
+            .header-top-right-list .subcribe{
+                margin-right: 30px;
+            }
+
+            .header-top-right-list .login-register .login .login-img{
+                content: "";
+                position: absolute;
+                top: 11px;
+                right: 370px;
+                width: 18px;
+                height: 18px;
+                background: url(images/icon_login.png) no-repeat;
+                background-size: 100% 100%;
+            }
+            .header-top-right-list .lagou-app .app-btn{
+                content: "";
+                position: absolute;
+                top: 11px;
+                right: 263px;
+                width: 14px;
+                height: 18px;
+                background: url(images/icon_phone.png) no-repeat;
+                background-size: 100% 100%;
+            }
+            
         </style>
 
     </head>
@@ -115,7 +175,15 @@
                                 <li>课程</li>
                             </ul>
                         </div>
-                        <div class="header-top-right"></div>
+                        <div class="header-top-right">
+                            <ul class="header-top-right-list fr clearFixed">
+                                <li class="upload"><a href="" >上传简历</a></li>
+                                <li class="subcribe"><a href="">职位订阅</a></li>
+                                <li class="login-register"><a href="" class="login"><span class="login-img"></span>登录</a><span>|</span><a href="" class="register">注册</a></li>
+                                <li class="lagou-app"><span class="app-btn"></span>拉钩APP</li>
+                                <li><a href="" class="enter-company">进入企业版</a></li>
+                            </ul>
+                        </div>
                       </div>
                   </div>
                   <div class="header-middle main">
