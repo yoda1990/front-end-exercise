@@ -1,259 +1,389 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>拉钩 Index demo</title>
-        <style>
-            *{
-                padding: 0px;
-                margin: 0px;
-            }
-            p,h1,h2,h3,h4,h5,h6,dl,dt,dd,ol,ul,li{
-                padding: 0px;
-                margin: 0px;
-            }
-            a{
-                text-decoration: none;
-            }
-            li{
-                list-style: none;
-            }
-            .main{
-                width: 100%;
-                margin: 0 auto;
-                padding: 0;
-            }
-            /* 左浮动 */
-            .fl{
-                float: left;
-            }
-            /* 右浮动 */
-            .fr{
-                float: right;
-            }
-            /* 浮动的父Class 都要添加清楚浮动 */
-            .clearFixed:after{
-                content: "";
-                display: block;
-                clear: both;
-            }
-            .header-top{
-                height: 40px;
-                background-color: #32373e;
-            }
-            .header-middle{
-                height: 120px;
-                background-color: #00b38a;
-            }
-            .header-search{
-                height: 130px;
-                background-color: #f2f5f4;
-            }
-            .header-top-content{
-                width: 1200px;
-                height: 40px;
-            }
 
-            .header-top-left{
-                line-height: 40px;
-            }
+<head>
+    <meta charset="UTF-8">
+    <title>拉钩 Index demo</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
 
-            .header-top-left-logo .logo{
-                font-size: 25px;
-                color: #118971;
-                margin-right: 30px;
-            }
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li {
+            padding: 0px;
+            margin: 0px;
+        }
 
-            .header-top-left-logo .city{
-                font-size: 15px;
-                color: #1fa385;
-                margin-right: 15px;
-            }
-            .header-top-left-logo .city-button{
-                font-size: 12px;
-                color: #818793;
-                margin-right: 35px;
-                text-align: center;
-            }
+        a {
+            text-decoration: none;
+        }
 
-            .header-top-left-list li{
-                width: 70px;
-                height: 40px;
-                float: left;
-                font-size: 14px;
-                color: #5c6169;
-                text-align: center;
-            }
-            .header-top-left-list li:first-child{
-                width: 70px;
-                height: 40px;
-                float: left;
-                font-size: 14px;
-                background-color: #24282c;
-                color: #fff;
-                text-align: center;
-            }
+        li {
+            list-style: none;
+        }
 
-            .header-top-right{
-                line-height: 40px;
-            }
+        .main {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0;
+        }
 
-            .header-top-right-list li{
-                width: 70px;
-                height: 40px;
-                float: left;
-                font-size: 14px;
-                color: #5c6169;
-                text-align: center;
-            }
-            .header-top-right-list a{
-                font-size: 14px;
-                color: #5c6169;
-                text-align: center;
-            }
-            .header-top-right-list .lagou-app{
-                color: #05b48d;
-                margin-right: 20px;
-            }
-            .header-top-right-list .login-register{
-                width: 120px;
-            }
-            .header-top-right-list span{
-                color: #5c6169;
-                text-align: center;
-                width: 20px;
-                margin-left: 5px;
-                margin-right: 5px;
-            }
-            .header-top-right-list .upload{
-                margin-right: 15px;
-            }
-            .header-top-right-list .subcribe{
-                margin-right: 30px;
-            }
+        /* 左浮动 */
+        .fl {
+            float: left;
+        }
 
-            .header-top-right-list .login-register .login .login-img{
-                content: "";
-                position: absolute;
-                top: 11px;
-                right: 372px;
-                width: 18px;
-                height: 18px;
-                background: url(images/icon_login.png) no-repeat;
-                background-size: 100% 100%;
-            }
-            .header-top-right-list .lagou-app .app-btn{
-                content: "";
-                position: absolute;
-                top: 11px;
-                right: 270px;
-                width: 14px;
-                height: 18px;
-                background: url(images/icon_phone.png) no-repeat;
-                background-size: 100% 100%;
-            }
-            .header-middle-content{
-                width: 1200px;
-                height: 120px;
-                margin: 0 auto;
-                background-color: transparent;
-            }
+        /* 右浮动 */
+        .fr {
+            float: right;
+        }
 
-            .header-middle-content-left{
-                position: relative;
-                width: 600px;
-                height: 120px;
-                background: url("images/header-middle-logo.png") no-repeat;
-                background-size: 226px 100%;
-                left: -201px;
-            }
+        /* 浮动的父Class 都要添加清楚浮动 */
+        .clearFixed:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
 
-           .header-middle-content-left-img{
-                position: absolute;
-                top: 32px;
-                left: 235px;
-            }
-            .header-middle-content-left-img img{
-                width: 330px;
-                height: 32px;
-            }
+        .header-top {
+            height: 40px;
+            background-color: #32373e;
+        }
 
-            .header-middle-left-text{
-                position: absolute;
-                top: 75px;
-                left: 235px;
-                font-size: 16px;
-                color: #fff;
-            }
+        .header-middle {
+            height: 120px;
+            background-color: #00b38a;
+        }
 
-            .header-middle-content-right{
-                position: relative;
-                width: 480px;
-                height: 120px;
-                background-color: pink;
-                top: -120px;
-            }
+        .header-search {
+            height: 130px;
+            background-color: #f2f5f4;
+        }
 
+        .header-top-content {
+            width: 1200px;
+            height: 40px;
+        }
+
+        .header-top-left {
+            line-height: 40px;
+        }
+
+        .header-top-left-logo .logo {
+            font-size: 25px;
+            color: #118971;
+            margin-right: 30px;
+        }
+
+        .header-top-left-logo .city {
+            font-size: 15px;
+            color: #1fa385;
+            margin-right: 15px;
+        }
+
+        .header-top-left-logo .city-button {
+            font-size: 12px;
+            color: #818793;
+            margin-right: 35px;
+            text-align: center;
+        }
+
+        .header-top-left-list li {
+            width: 70px;
+            height: 40px;
+            float: left;
+            font-size: 14px;
+            color: #5c6169;
+            text-align: center;
+        }
+
+        .header-top-left-list li:first-child {
+            width: 70px;
+            height: 40px;
+            float: left;
+            font-size: 14px;
+            background-color: #24282c;
+            color: #fff;
+            text-align: center;
+        }
+
+        .header-top-right {
+            line-height: 40px;
+        }
+
+        .header-top-right-list li {
+            width: 70px;
+            height: 40px;
+            float: left;
+            font-size: 14px;
+            color: #5c6169;
+            text-align: center;
+        }
+
+        .header-top-right-list a {
+            font-size: 14px;
+            color: #5c6169;
+            text-align: center;
+        }
+
+        .header-top-right-list .lagou-app {
+            color: #05b48d;
+            margin-right: 20px;
+        }
+
+        .header-top-right-list .login-register {
+            width: 120px;
+        }
+
+        .header-top-right-list span {
+            color: #5c6169;
+            text-align: center;
+            width: 20px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .header-top-right-list .upload {
+            margin-right: 15px;
+        }
+
+        .header-top-right-list .subcribe {
+            margin-right: 30px;
+        }
+
+        .header-top-right-list .login-register .login .login-img {
+            content: "";
+            position: absolute;
+            top: 11px;
+            right: 372px;
+            width: 18px;
+            height: 18px;
+            background: url(images/icon_login.png) no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .header-top-right-list .lagou-app .app-btn {
+            content: "";
+            position: absolute;
+            top: 11px;
+            right: 270px;
+            width: 14px;
+            height: 18px;
+            background: url(images/icon_phone.png) no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .header-middle-content {
+            width: 1200px;
+            height: 120px;
+            margin: 0 auto;
+            background-color: transparent;
+        }
+
+        .header-middle-content-left {
+            position: relative;
+            width: 600px;
+            height: 120px;
+            background: url("images/header-middle-logo.png") no-repeat;
+            background-size: 226px 100%;
+            left: -201px;
+        }
+
+        .header-middle-content-left-img {
+            position: absolute;
+            top: 32px;
+            left: 235px;
+        }
+
+        .header-middle-content-left-img img {
+            width: 330px;
+            height: 32px;
+        }
+
+        .header-middle-left-text {
+            position: absolute;
+            top: 75px;
+            left: 235px;
+            font-size: 16px;
+            color: #fff;
+        }
+
+        .header-middle-content-right {
+            position: relative;
+            width: 480px;
+            height: 120px;
+            background-color: transparent;
+            top: -120px;
+        }
+
+        .header-middle-content-right .form {
+            position: absolute;
+            width: 480px;
+            height: 38px;
+            margin: 0 auto;
+            top: 42px;
+            font-size: 16px;
+        }
+
+        .header-middle-content-right .form .form-phone {
+            width: 214px;
+            height: 36px;
+            margin-right: 10px;
+            background-color: #fff;
             
-        </style>
+        }
 
-    </head>
-    <body>
-        <div class="main">
-              <div class="header main">
-                  <div class="header-top main">
-                      <div class="header-top-content main">
-                        <div class="header-top-left">
-                            <div class="header-top-left-logo fl">
-                                <a href="" class="logo">拉钩</a>
-                                <a href="" class="city">全国</a>
-                                <a href="" class="city-button">[切换]</a>
-                            </div>
-                            <ul class="header-top-left-list fl clearFixed">
-                                <li>首页</li>
-                                <li>公司</li>
-                                <li>校园招聘</li>
-                                <li>言职</li>
-                                <li>课程</li>
-                            </ul>
-                        </div>
-                        <div class="header-top-right">
-                            <ul class="header-top-right-list fr clearFixed">
-                                <li class="upload"><a href="" >上传简历</a></li>
-                                <li class="subcribe"><a href="">职位订阅</a></li>
-                                <li class="login-register"><a href="" class="login"><span class="login-img"></span>登录</a><span>|</span><a href="" class="register">注册</a></li>
-                                <li class="lagou-app"><span class="app-btn"></span>拉钩APP</li>
-                                <li><a href="" class="enter-company">进入企业版</a></li>
-                            </ul>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="header-middle main">
-                      <div class="header-middle-content main clearFixed">
-                        <div class="header-middle-content-left fl">
-                            <div class="header-middle-content-left-img">
-                                <img src="images/header-middle-text.png" alt="">
-                            </div>
-                            <div class="header-middle-left-text">
-                                950191家公司 | 7373391个职位，在拉勾等你
-                            </div>
-                        </div>
-                        <div class="header-middle-content-right fr">
-                           <div class="phone">
-                               <input class="phone-input" placeholder="输入手机号"/>
-                               <input class="phone-check-code" placeholder="验证码"/><a>| 获取</a>
-                               <input type="button" class="login-register-btn-input" name="登录/注册"/>
-                           </div>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="header-search main">
+        .form-phone-controy-code{
+            width: 66px;
+            height: 36px;
+            margin-left: 2px;
+        }
 
-                  </div>
-              </div>
+        .form-phone-area-code:after {
+            width: 9px;
+            height: 5px;
+            position: absolute;
+            right: 0;
+            top: 100px;
+            margin-top: -2.5px;
+            background: url(images/header-middle-trangle.png) no-repeat;
+            background-size: contain;
+            background-color:red;
+        }
+        .form-phone .phone-input{
+            width: 144px;
+            height: 36px;
+            border-style: none;
+            outline-style:none;
+            text-indent: 10px;
+        }
+
+        .form-phone-area-code{
+            position: absolute;
+            top: 8px;
+        }
+
+        .form-check-code{
+            width: 146px;
+            height: 36px;
+            margin-right: 10px;
+            background-color: #fff;
+        }
+
+        .phone-check-code{
+            width: 92px;
+            height: 36px;
+            border-style: none;
+            outline-style:none;
+            text-indent: 10px;
+        }
+
+        .check-code-get{
+            height: 36px;
+            background-color: #fff;
+        }
+
+        .check-code-get-text{
+            position: absolute;
+            top: 8px;
+            background-color: #fff;
+        }
+
+        .login-register-btn-input{
+            width: 100px;
+            background-color: transparent;
+            border: #44c7a9 1px solid;
+            height: 36px;
+            color: #b3e8dc;
+            outline-style:none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="header main">
+            <div class="header-top main">
+                <div class="header-top-content main">
+                    <div class="header-top-left">
+                        <div class="header-top-left-logo fl">
+                            <a href="" class="logo">拉钩</a>
+                            <a href="" class="city">全国</a>
+                            <a href="" class="city-button">[切换]</a>
+                        </div>
+                        <ul class="header-top-left-list fl clearFixed">
+                            <li>首页</li>
+                            <li>公司</li>
+                            <li>校园招聘</li>
+                            <li>言职</li>
+                            <li>课程</li>
+                        </ul>
+                    </div>
+                    <div class="header-top-right">
+                        <ul class="header-top-right-list fr clearFixed">
+                            <li class="upload"><a href="">上传简历</a></li>
+                            <li class="subcribe"><a href="">职位订阅</a></li>
+                            <li class="login-register"><a href="" class="login"><span
+                                        class="login-img"></span>登录</a><span>|</span><a href="" class="register">注册</a>
+                            </li>
+                            <li class="lagou-app"><span class="app-btn"></span>拉钩APP</li>
+                            <li><a href="" class="enter-company">进入企业版</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="header-middle main">
+                <div class="header-middle-content main clearFixed">
+                    <div class="header-middle-content-left fl">
+                        <div class="header-middle-content-left-img">
+                            <img src="images/header-middle-text.png" alt="">
+                        </div>
+                        <div class="header-middle-left-text">
+                            950191家公司 | 7373391个职位，在拉勾等你
+                        </div>
+                    </div>
+                    <div class="header-middle-content-right fr">
+                        <div class="form clearFixed">
+                            <div class="form-phone fl">
+                                <div class="form-phone-controy-code fl">
+                                    <span class="form-phone-area-code">0086</span>
+                                </div>
+                                <input class="phone-input fl" name="phone" placeholder="输入手机号" />
+                            </div>
+                            <div class="form-check-code fl">
+                                <input class="phone-check-code fl" placeholder="验证码" />
+                                <div class="check-code-get fl"><span class="check-code-get-text">| 获取</span></div>
+                            </div>
+                            <div class="form-submit fl">
+                                <input type="submit" class="login-register-btn-input fl" value="登录/注册" />
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-search main">
+
+            </div>
         </div>
-    </body>
-    <footer>
+    </div>
+</body>
+<footer>
 
-    </footer>
+</footer>
+
 </html>
