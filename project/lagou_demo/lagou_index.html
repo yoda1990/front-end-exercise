@@ -263,6 +263,7 @@
             background-size: contain;
             background-color:red;
         }
+
         .form-phone .phone-input{
             width: 144px;
             height: 36px;
@@ -309,6 +310,63 @@
             height: 36px;
             color: #b3e8dc;
             outline-style:none;
+        }
+        .header-search-content{
+            position: relative;
+            width: 938px;
+            height: 72px;
+            margin: 0 auto;
+        }
+        .header-search-content-value{
+            width: 796px;
+            height: 45px;
+            position: absolute;
+            top: 30px;
+        }
+        .header-search-content-input{
+            position: absolute;
+            width: 794px;
+            height: 45px;
+            outline-style: none;
+            border-style: none;
+            text-indent: 10px;
+        }
+        .header-search-content-submit{
+            position: relative;
+            width: 144px;
+            height: 45px;
+            top: 30px;
+            right: -350px;
+        }
+        .header-search-content-submit-btn{
+            width: 144px;
+            height: 45px;
+            background-color: #00b38a;
+            outline-style:none;
+            color: #fff;
+            border-style: none;
+        }
+        .header-search-hot{
+            position: absolute;
+            width: 290px;
+            height: 15px;
+            top: 86px;
+        }
+        .header-search-hot-list{
+            width: 700px;
+            height: 15px;
+        }
+        .header-search-hot-list li{
+            font-size: 15px;
+            width: auto;
+            margin-right: 20px;
+            color: #8fdace;
+
+        }
+        .header-search-hot-list li:first-child{
+            color: #aeafaf;
+            margin-right: 10px;
+
         }
 
     </style>
@@ -377,7 +435,22 @@
                 </div>
             </div>
             <div class="header-search main">
-
+                <div class="header-search-content clearFixed">
+                    <div class="header-search-content-value fl">
+                        <input class="header-search-content-input" name="search" placeholder="搜索职位、公司或地点" />
+                    </div>
+                    <div class="header-search-content-submit fr">
+                        <input type="submit" class="header-search-content-submit-btn" value="搜索" />
+                    </div>
+                    <div class="header-search-hot">
+                        <ul class="header-search-hot-list clearFixed">
+                            <li class="search-hot fl">热门搜索：</li>
+                            <li class="fl">腾讯产品</li>
+                            <li class="fl">Java面试</li>
+                            <li class="fl">面经分享</li>
+                        </ul>
+                   </div>
+                </div>
             </div>
         </div>
     </div>
