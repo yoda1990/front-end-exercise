@@ -880,7 +880,7 @@
             font-size: 14px;
         }
 
-        .content-left .download .download-a{
+        .content-left .download .download-a {
             margin-top: 10px;
             display: block;
             font-size: 14px;
@@ -906,7 +906,8 @@
             margin-bottom: 20px;
             font-size: 14px;
         }
-        .content-left .minichat .minichat-a{
+
+        .content-left .minichat .minichat-a {
             margin-top: 10px;
             display: block;
             font-size: 14px;
@@ -939,7 +940,7 @@
             width: 16px;
             margin-right: 5px;
             background: url(images/lagou-icon.png) -114px -184px no-repeat;
-            
+
         }
 
         .weichatweibo-right-bg {
@@ -949,7 +950,122 @@
             margin-right: 5px;
             background: url(images/lagou-icon.png) -214px -20px no-repeat;
         }
+
+        .content-right {
+            width: 760px;
+            height: 135px;
+            background-color: transparent;
+            margin: 0 auto;
+            position: absolute;
+            top: 50px;
+            right: 0;
+        }
+
+        .content-right1 {
+            width: 253px;
+            height: 135px;
+        }
+
+        .content-right1 ul li {
+            font-size: 14px;
+            margin-bottom: 16px;
+            color: #c6c6c6;
+        }
+
+        .content-right1 ul li:first-child {
+            font-size: 18px;
+            margin-bottom: 35px;
+            color: #727270;
+        }
+
+        .footer-down {
+            height: 95px;
+            background-color: #f0f0f0;
+        }
+
+        .footer-down-content {
+            width: 1200px;
+            height: 95px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .footer-down-content-left{
+            width: 810px;
+            height: 62px;
+            margin: 0 auto;
+            position: absolute;
+            top: 27px;
+        }
+
+        .footer-down-content-left ul li{
+            float: left;
+            margin-right: 20px;
+        }
+
+        .footer-down-content-jubao{
+            width: 186px;
+            height: 60px;
+            border: #d8d3d0 1px solid;
+            font-size: 13px;
+        }
+        .lagou-jubao-text{
+            display: block;
+            font-size: 12px;
+            width: 123px;
+            height: 42px;
+            margin: 0 auto;
+            margin-top: 10px;
+            color: #d8d3d0;
+        }
+
+        .lagou-gongan {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: url(images/lagou-icon.png) -150px -184px no-repeat;
+            margin: 0 5px 0 20px;
+        }
+
+        .lagou-jubao {
+            display: inline-block;
+            width: 20px;
+            height: 24px;
+            background: url(images/lagou-icon.png) -132px -20px no-repeat;
+            margin: 20px 10px 0px 30px;
+        }
+
+        .footer-lagou-icon {
+            display: inline-block;
+            width: 200px;
+            height: 22px;
+            background: url(images/footer_lagou_icon.png) 0 0 no-repeat;
+        }
+
+        .lagou-backup-text{
+            display: block;
+            text-align: center;
+            color: #6f6f6f;
+            margin-top: 20px;
+        }
+
+        .lagou-gongan-text{
+            display: block;
+            text-align: center;
+            color: #6f6f6f;
+            margin-top: 20px;
+        }
+
+        .footer-down-content-right{
+            width: 200px;
+            height: 22px;
+            position: absolute;
+            top: 48px;
+            right: 10px;
+            background-color:transparent;
+        }
     </style>
+
 
 </head>
 
@@ -1551,26 +1667,54 @@
                         </div>
                     </div>
                 </div>
-                <div class="content-right fl">
-                    <div class="content-right1">
-
+                <div class="content-right fr clearFixed">
+                    <div class="content-right1 fl">
+                        <ul>
+                            <li>企业服务</li>
+                            <li>招聘抢人宝典</li>
+                            <li>公司搜索</li>
+                            <li>拉钩APP</li>
+                        </ul>
                     </div>
-                    <div class="content-right1">
-
+                    <div class="content-right1 fl">
+                        <ul>
+                            <li>用户帮助</li>
+                            <li>用户服务协议</li>
+                            <li>隐私政策</li>
+                            <li>在线提问</li>
+                        </ul>
                     </div>
-                    <div class="content-right1">
-
+                    <div class="content-right1 fl">
+                        <ul>
+                            <li>联系方式</li>
+                            <li>服务热线：4006 2828 35(9:00-18:00)</li>
+                            <li>企业服务邮箱：cc@lagou.com</li>
+                            <li>联系我们</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
         <div class="footer-down">
-            <div class="footer-down-content">
-                <div class="footer-down-content-left">
-
+            <div class="footer-down-content clearFixed">
+                <div class="footer-down-content-left fl">
+                    <ul class="clearFixed">
+                        <li><p class="lagou-backup-text"><em>@</em><span>2020</span> 拉勾网<span>京ICP备14023790号-2</span></p></li>
+                        <li><p class="lagou-gongan-text"><i class="lagou-gongan"></i>京公安网安备 11010802024043号</p></li>
+                        <li>
+                            <div class="footer-down-content-jubao clearFixed">
+                                <i class="lagou-jubao"></i>
+                                <p class="lagou-jubao-text fr">
+                                    <span class="lagou-jubao-text1">违法和不良信息举报</span>
+                                    <span>电话：4006 2828 35</span>
+                                    <span>邮箱：cc@lagou.com</span>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-                <div class="footer-down-content-right">
-
+                <div class="footer-down-content-right fr">
+                    <i class="footer-lagou-icon"></i>
                 </div>
             </div>
         </div>
