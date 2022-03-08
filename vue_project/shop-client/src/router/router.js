@@ -1,7 +1,7 @@
-import home from '@pages/home/index'
-import search from '@pages/search/index'
-import register from '@pages/register/index'
-import login from '@pages/login/index'
+import home from '/src/pages/home/index'
+import search from '/src/pages/search/index'
+import register from '/src/pages/register/index'
+import login from '/src/pages/login/index'
 
 
 export default[
