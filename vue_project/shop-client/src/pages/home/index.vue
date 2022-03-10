@@ -3,6 +3,7 @@
 </template>
 
 <script>
+import Header from '/src/components/header/index'
 export default {
     name: 'home',
     data () {
