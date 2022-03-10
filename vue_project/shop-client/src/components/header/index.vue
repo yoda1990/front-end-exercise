@@ -31,6 +31,8 @@
       </h1> 
       <div class="searchArea"> 
         <form action="###" class="searchForm"> 
+          <!--  -->
+          <!--  -->
           <input type="text" id="autocomplete" class="input-error input-xxlarge" v-model="keyword"/> 
           <button class="sui-btn btn-xlarge btn-danger" type="button" @click="search">搜索</button> 
         </form> 
@@ -41,16 +43,15 @@
 
 <script>
   export default {
-    name:"Header",
+    name:"header",
     data(){
       return{
          keyword:''
         }
     },
-
     methods:{
       search(){
-      this.$router.push(`/search/${this.keyword}`)
+       this.$router.push(`/search/${this.keyword}`)
     }
   }
 }
@@ -58,44 +59,38 @@
 
 <style lang="less" scoped>
 .header{
-&>.top{
-background-color:#eaeaea;
-height:30px;
-line-height:30px;
+   &>.top{
+      background-color:#eaeaea;
+      height:30px;
+      line-height:30px;
 
-.container{
-width: 1200px;
-margin: 0 auto;
-overflow: hidden;
-.loginList {
-float:left;
-
-p {
-float:left;
-margin-right:10px;
-
-.register{
-  border-left:1px solid #b3aeae;
-  padding:0 5px;
-  margin-left:5px;
-  }
-  }
-  }
-
-.typeList{
-float:right;
-
-a{
-padding:0 10px;
-
-&+a {
-  border-left:1px solid #b3aeae;
-  }
-}
-}
-
-}
-}
+      .container{
+        width: 1200px;
+        margin: 0 auto;
+        overflow: hidden;
+        .loginList {
+           float:left;
+          p {
+             float:left;
+             margin-right:10px;
+             .register {
+               border-left:1px solid #b3aeae;
+               padding:0 5px;
+               margin-left:5px;
+              }
+            }
+        }
+        .typeList {
+           float:right;
+           a {
+             padding:0 10px;
+             &+a {
+               border-left:1px solid #b3aeae;
+              }
+            }
+        }
+      }
+   }
 
 &>.bottom{
 width:1200px;
