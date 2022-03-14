@@ -1,17 +1,17 @@
 <template>
-    <div>Home</div>
+  <div>
+
+  </div>
 </template>
 
 <script>
-import Header from '/src/components/header/index'
 export default {
-    name: 'home',
-    data () {
-        return {}
-    },
+  name: 'home',
+  data() {
+    return {}
+  },
 }
 </script>
 
 <style lang="less" scoped>
-     
 </style>

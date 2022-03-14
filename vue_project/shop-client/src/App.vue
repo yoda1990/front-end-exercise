@@ -1,24 +1,23 @@
 <template>
   <div>
-    <header/>
+    <Header />
     <router-view></router-view>
-    <footer/>
+    <Footer />
   </div>
 </template>
 
 <script>
-import header from './components/header'
-import footer from './components/footer'
+import Header from '/src/components/header/index'
+import Footer from '/src/components/footer/index'
 
 export default {
   name: 'App',
   components: {
-    header,
-    footer
-  }
+    Header,
+    Footer,
+  },
 }
 </script>
 
 <style lang = "less" scoped>
-
 </style>
