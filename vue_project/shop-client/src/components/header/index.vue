@@ -6,8 +6,8 @@
           <p>尚品汇欢迎您！</p>
           <p>
             <span>请</span>
-            <a href="###">登录</a>
-            <a href="###">免费注册</a>
+            <a href="/login">登录</a>
+            <a href="/register">免费注册</a>
           </p>
         </div>
         <div class="typeList">
