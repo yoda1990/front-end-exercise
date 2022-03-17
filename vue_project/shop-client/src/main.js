@@ -1,12 +1,14 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+import store from './store'
 
 Vue.config.productionTip = false
 
 new Vue({
   render: h => h(App),
-  router, // 注册路由器
+  //注册路由，此时组件中都会拥有$router $route属性
+  router,
+  //注册store,此时组件中都会拥有$store
+  store
 }).$mount('#app')
-
-
