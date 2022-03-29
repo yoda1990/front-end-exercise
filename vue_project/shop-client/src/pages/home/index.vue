@@ -11,8 +11,7 @@
     <!--  猜你喜欢-->
     <Like />
     <!-- 楼层 -->
-    <Floor />
-    <Floor />
+    <Floor v-for="floor in floor" :key="floor.id" :floor="floor" />
     <!--  商标-->
     <Brand />
   </div>
@@ -40,6 +39,17 @@ export default {
     Like,
     Floor,
     Brand,
+  },
+  mounted() {
+    // 触发vuex的异步action调用, 从mock接口请求数据到state中
+    this.$store.dispatch('getBanners')
+    this.$store.dispatch('getFloors')
+  },
+
+  computed: {
+    ...mapState({
+      floors: (state) => state.home.floors,
+    }),
   },
 }
 </script>
