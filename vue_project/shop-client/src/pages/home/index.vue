@@ -25,6 +25,7 @@ import Rank from '/src/pages/home/rank'
 import Like from '/src/pages/home/like'
 import Floor from '/src/pages/home/floor'
 import Brand from '/src/pages/home/brand'
+import { mapState, mapMutations, mapAction } from 'vuex'
 
 export default {
   name: 'home',
