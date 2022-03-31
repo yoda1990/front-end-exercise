@@ -105,15 +105,25 @@ export default {
         this.isShow = false
       }
     },
-
+    /*
+   点击某个分类项跳转到search路由
+  */
     toSearch(event) {
-      // 得到事件源标签上的自定义属性
-      const { categoryname, category1id, category2id, category3id } = event.target.dataset
-      // console.log(categoryname)
-      // 如果有分类名称, 说明点击的是某个分类项
+      // 只绑定的一个点击监听
+      // console.dir(event.target)
+      // 得到所有标签上的data自定义属性
+      const dataset = event.target.dataset
+      // console.log('dataset', dataset)
+      // 取出自定义属性值
+      const { categoryname, category1id, category2id, category3id } = dataset
+
+      //if (event.target.tagName==='A') { // 如果点击的是a标签就可以跳转了
       if (categoryname) {
-        // 准备query参数
-        const query = { categoryName: categoryname }
+        // 必然点击的是分类项
+        // 准备query参数对象
+        const query = {
+          categoryName: categoryname,
+        }
         if (category1id) {
           query.category1Id = category1id
         } else if (category2id) {
@@ -121,8 +131,28 @@ export default {
         } else if (category3id) {
           query.category3Id = category3id
         }
-        // 跳转到搜索路由, 携带准备的query参数
-        this.$router.push({ path: '/search', query })
+
+        // 得到当前路由路径     /  或者 /search 或者 /search/xxx
+        const { path, params } = this.$route
+
+        this.hideFirst()
+
+        // 如果当前已经在搜索界面
+        if (path.indexOf('/search') === 0) {
+          // 跳转到搜索, path为原本的路径(可能携带了params参数)
+          this.$router.replace({
+            name: 'search',
+            params,
+            query,
+          })
+        } else {
+          // 当前没在搜索界面
+          // 跳转路由, 并携带query参数
+          this.$router.push({
+            path: '/search',
+            query,
+          })
+        }
       }
     },
   },

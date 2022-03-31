@@ -54,6 +54,36 @@ export default {
       this.$router.push(`/search/${this.keyword}`)
     },
   },
+  mounted() {
+    // 通过全局总线绑定removeKeyword事件监听
+    this.$bus.$on('removeKeyword', () => {
+      this.keyword = '' // 置空我们的搜索关键字
+    })
+  },
+
+  toSearch() {
+    // 得到当前的请求路径和query参数对象
+    const { path, query } = this.$route
+    if (this.keyword) {
+      // 如果当前在搜索页面, 需要携带params和query参数
+      if (path.indexOf('/search') === 0) {
+        this.$router.push({
+          name: 'search',
+          params: { keyword: this.keyword },
+          query,
+        }) // 可以
+      } else {
+        // 如果不在, 只需要携带params参数
+        this.$router.push({ name: 'search', params: { keyword: this.keyword } }) // 可以
+      }
+    } else {
+      if (path.indexOf('/search') === 0) {
+        this.$router.push({ name: 'search', query })
+      } else {
+        this.$router.push({ name: 'search' })
+      }
+    }
+  },
 }
 </script>
 
